@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: bd3521496592bbf4a84ad90627ce55cf
+timeCreated: 1523735779
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Mesh10_Mesh15_1_skp21B9_1_Model
+    100002: Mesh11_Mesh16_1_skp21B9_1_Model
+    100004: Mesh12_Mesh17_1_skp21B9_1_Model
+    100006: Mesh13_Mesh18_1_skp21B9_1_Model
+    100008: Mesh14_Mesh19_1_skp21B9_1_Model
+    100010: Mesh15_Mesh20_1_skp21B9_1_Model
+    100012: Mesh16_Mesh21_1_skp21B9_1_Model
+    100014: Mesh17_Mesh22_1_skp21B9_1_Model
+    100016: Mesh18_Group6_1_skp21B9_1_Model
+    100018: Mesh19_Mesh23_1_skp21B9_1_Model
+    100020: Mesh1_Susan1_Model
+    100022: Mesh20_Mesh24_1_skp21B9_1_Model
+    100024: Mesh21_Mesh25_1_skp21B9_1_Model
+    100026: Mesh22_Mesh26_1_skp21B9_1_Model
+    100028: Mesh23_Mesh27_1_skp21B9_1_Model
+    100030: Mesh24_Mesh28_1_skp21B9_1_Model
+    100032: Mesh25_Mesh29_1_skp21B9_1_Model
+    100034: Mesh26_Group8_1_skp21B9_1_Model
+    100036: Mesh27_Group9_1_skp21B9_1_Model
+    100038: Mesh2_Mesh01_1_skp21B9_1_Model
+    100040: Mesh3_Group1_1_skp21B9_1_Model
+    100042: Mesh4_Group10_1_skp21B9_1_Model
+    100044: Mesh5_Group11_1_skp21B9_1_Model
+    100046: Mesh6_Group12_1_skp21B9_1_Model
+    100048: Mesh7_Group2_1_skp21B9_1_Model
+    100050: Mesh8_Group3_1_skp21B9_1_Model
+    100052: Mesh9_Group4_1_skp21B9_1_Model
+    100054: //RootNode
+    400000: Mesh10_Mesh15_1_skp21B9_1_Model
+    400002: Mesh11_Mesh16_1_skp21B9_1_Model
+    400004: Mesh12_Mesh17_1_skp21B9_1_Model
+    400006: Mesh13_Mesh18_1_skp21B9_1_Model
+    400008: Mesh14_Mesh19_1_skp21B9_1_Model
+    400010: Mesh15_Mesh20_1_skp21B9_1_Model
+    400012: Mesh16_Mesh21_1_skp21B9_1_Model
+    400014: Mesh17_Mesh22_1_skp21B9_1_Model
+    400016: Mesh18_Group6_1_skp21B9_1_Model
+    400018: Mesh19_Mesh23_1_skp21B9_1_Model
+    400020: Mesh1_Susan1_Model
+    400022: Mesh20_Mesh24_1_skp21B9_1_Model
+    400024: Mesh21_Mesh25_1_skp21B9_1_Model
+    400026: Mesh22_Mesh26_1_skp21B9_1_Model
+    400028: Mesh23_Mesh27_1_skp21B9_1_Model
+    400030: Mesh24_Mesh28_1_skp21B9_1_Model
+    400032: Mesh25_Mesh29_1_skp21B9_1_Model
+    400034: Mesh26_Group8_1_skp21B9_1_Model
+    400036: Mesh27_Group9_1_skp21B9_1_Model
+    400038: Mesh2_Mesh01_1_skp21B9_1_Model
+    400040: Mesh3_Group1_1_skp21B9_1_Model
+    400042: Mesh4_Group10_1_skp21B9_1_Model
+    400044: Mesh5_Group11_1_skp21B9_1_Model
+    400046: Mesh6_Group12_1_skp21B9_1_Model
+    400048: Mesh7_Group2_1_skp21B9_1_Model
+    400050: Mesh8_Group3_1_skp21B9_1_Model
+    400052: Mesh9_Group4_1_skp21B9_1_Model
+    400054: //RootNode
+    2300000: Mesh10_Mesh15_1_skp21B9_1_Model
+    2300002: Mesh11_Mesh16_1_skp21B9_1_Model
+    2300004: Mesh12_Mesh17_1_skp21B9_1_Model
+    2300006: Mesh13_Mesh18_1_skp21B9_1_Model
+    2300008: Mesh14_Mesh19_1_skp21B9_1_Model
+    2300010: Mesh15_Mesh20_1_skp21B9_1_Model
+    2300012: Mesh16_Mesh21_1_skp21B9_1_Model
+    2300014: Mesh17_Mesh22_1_skp21B9_1_Model
+    2300016: Mesh18_Group6_1_skp21B9_1_Model
+    2300018: Mesh19_Mesh23_1_skp21B9_1_Model
+    2300020: Mesh1_Susan1_Model
+    2300022: Mesh20_Mesh24_1_skp21B9_1_Model
+    2300024: Mesh21_Mesh25_1_skp21B9_1_Model
+    2300026: Mesh22_Mesh26_1_skp21B9_1_Model
+    2300028: Mesh23_Mesh27_1_skp21B9_1_Model
+    2300030: Mesh24_Mesh28_1_skp21B9_1_Model
+    2300032: Mesh25_Mesh29_1_skp21B9_1_Model
+    2300034: Mesh26_Group8_1_skp21B9_1_Model
+    2300036: Mesh27_Group9_1_skp21B9_1_Model
+    2300038: Mesh2_Mesh01_1_skp21B9_1_Model
+    2300040: Mesh3_Group1_1_skp21B9_1_Model
+    2300042: Mesh4_Group10_1_skp21B9_1_Model
+    2300044: Mesh5_Group11_1_skp21B9_1_Model
+    2300046: Mesh6_Group12_1_skp21B9_1_Model
+    2300048: Mesh7_Group2_1_skp21B9_1_Model
+    2300050: Mesh8_Group3_1_skp21B9_1_Model
+    2300052: Mesh9_Group4_1_skp21B9_1_Model
+    3300000: Mesh10_Mesh15_1_skp21B9_1_Model
+    3300002: Mesh11_Mesh16_1_skp21B9_1_Model
+    3300004: Mesh12_Mesh17_1_skp21B9_1_Model
+    3300006: Mesh13_Mesh18_1_skp21B9_1_Model
+    3300008: Mesh14_Mesh19_1_skp21B9_1_Model
+    3300010: Mesh15_Mesh20_1_skp21B9_1_Model
+    3300012: Mesh16_Mesh21_1_skp21B9_1_Model
+    3300014: Mesh17_Mesh22_1_skp21B9_1_Model
+    3300016: Mesh18_Group6_1_skp21B9_1_Model
+    3300018: Mesh19_Mesh23_1_skp21B9_1_Model
+    3300020: Mesh1_Susan1_Model
+    3300022: Mesh20_Mesh24_1_skp21B9_1_Model
+    3300024: Mesh21_Mesh25_1_skp21B9_1_Model
+    3300026: Mesh22_Mesh26_1_skp21B9_1_Model
+    3300028: Mesh23_Mesh27_1_skp21B9_1_Model
+    3300030: Mesh24_Mesh28_1_skp21B9_1_Model
+    3300032: Mesh25_Mesh29_1_skp21B9_1_Model
+    3300034: Mesh26_Group8_1_skp21B9_1_Model
+    3300036: Mesh27_Group9_1_skp21B9_1_Model
+    3300038: Mesh2_Mesh01_1_skp21B9_1_Model
+    3300040: Mesh3_Group1_1_skp21B9_1_Model
+    3300042: Mesh4_Group10_1_skp21B9_1_Model
+    3300044: Mesh5_Group11_1_skp21B9_1_Model
+    3300046: Mesh6_Group12_1_skp21B9_1_Model
+    3300048: Mesh7_Group2_1_skp21B9_1_Model
+    3300050: Mesh8_Group3_1_skp21B9_1_Model
+    3300052: Mesh9_Group4_1_skp21B9_1_Model
+    4300000: Mesh10_Mesh15_1_skp21B9_1_Model
+    4300002: Mesh11_Mesh16_1_skp21B9_1_Model
+    4300004: Mesh12_Mesh17_1_skp21B9_1_Model
+    4300006: Mesh13_Mesh18_1_skp21B9_1_Model
+    4300008: Mesh14_Mesh19_1_skp21B9_1_Model
+    4300010: Mesh15_Mesh20_1_skp21B9_1_Model
+    4300012: Mesh16_Mesh21_1_skp21B9_1_Model
+    4300014: Mesh17_Mesh22_1_skp21B9_1_Model
+    4300016: Mesh18_Group6_1_skp21B9_1_Model
+    4300018: Mesh19_Mesh23_1_skp21B9_1_Model
+    4300020: Mesh1_Susan1_Model
+    4300022: Mesh20_Mesh24_1_skp21B9_1_Model
+    4300024: Mesh21_Mesh25_1_skp21B9_1_Model
+    4300026: Mesh22_Mesh26_1_skp21B9_1_Model
+    4300028: Mesh23_Mesh27_1_skp21B9_1_Model
+    4300030: Mesh24_Mesh28_1_skp21B9_1_Model
+    4300032: Mesh25_Mesh29_1_skp21B9_1_Model
+    4300034: Mesh26_Group8_1_skp21B9_1_Model
+    4300036: Mesh27_Group9_1_skp21B9_1_Model
+    4300038: Mesh2_Mesh01_1_skp21B9_1_Model
+    4300040: Mesh3_Group1_1_skp21B9_1_Model
+    4300042: Mesh4_Group10_1_skp21B9_1_Model
+    4300044: Mesh5_Group11_1_skp21B9_1_Model
+    4300046: Mesh6_Group12_1_skp21B9_1_Model
+    4300048: Mesh7_Group2_1_skp21B9_1_Model
+    4300050: Mesh8_Group3_1_skp21B9_1_Model
+    4300052: Mesh9_Group4_1_skp21B9_1_Model
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
