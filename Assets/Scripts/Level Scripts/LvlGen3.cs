@@ -36,15 +36,23 @@ public class LvlGen3 : MonoBehaviour {
 	int doorCount;
 	int doorNumber;
 	public GameObject Door, Entrance;
+	//public GameObject gwyllgi, gwyllgi1, gwyllgi2;
 
 	public bool allDone = false;
 	int smoothCount = 0;
 
-	bool firstTime = true;
 	GameObject wallGate;
 	public GameObject player;
+	public GameObject[] spawnPoints;
+
+	void Awake() {
+		if (BoolStorage.gameCount == 0) {
+			BoolStorage.firstTime = true;
+		}
+	}
 	
 	void Start() {
+		
 		height = width;
 		numbers = new List<int>();
 		allTiles = new List<TileHolder>();
@@ -62,6 +70,35 @@ public class LvlGen3 : MonoBehaviour {
 			Scene loadedLevel = SceneManager.GetActiveScene();
      		SceneManager.LoadScene (loadedLevel.buildIndex);
 		}
+	/*	if (allDone) {
+			if (BoolStorage.gameCount == 0) {
+				GameObject spawn = spawnPoints[Random.Range(1, 7)];
+				gwyllgi.transform.position = spawn.transform.position;
+				gwyllgi.SetActive(true);
+			}
+
+			if (BoolStorage.gameCount == 1) {
+				GameObject spawn = spawnPoints[Random.Range(1, 7)];
+				gwyllgi.transform.position = spawn.transform.position;
+				gwyllgi.SetActive(true);
+				GameObject spawn2 = spawnPoints[Random.Range(1, 7)];
+				gwyllgi1.transform.position = spawn2.transform.position;
+				gwyllgi1.SetActive(true);
+			}
+
+			if (BoolStorage.gameCount >= 2) {
+				GameObject spawn = spawnPoints[Random.Range(1, 7)];
+				gwyllgi.transform.position = spawn.transform.position;
+				gwyllgi.SetActive(true);
+				GameObject spawn2 = spawnPoints[Random.Range(1, 7)];
+				gwyllgi1.transform.position = spawn2.transform.position;
+				gwyllgi1.SetActive(true);
+				GameObject spawn3 = spawnPoints[Random.Range(1, 7)];
+				gwyllgi2.transform.position = spawn3.transform.position;
+				gwyllgi2.SetActive(true);
+			}
+		}*/
+
 	}
 
 
@@ -176,6 +213,7 @@ public class LvlGen3 : MonoBehaviour {
 		CreateGate();
 		MakeObstacles();
 		PlayerTile();
+		allDone = true;
 	}
 
 	void SmoothMap() {
@@ -284,24 +322,29 @@ public class LvlGen3 : MonoBehaviour {
 				TH.game_obj.layer = 8;
 			}
 		}
-		allDone = true;
 		return;
 	}
 
 	void CreateGate() {
-		if (firstTime) {
-			wallGate = walls[Random.Range(1, walls.Count)];
-			Instantiate(Entrance, wallGate.transform.position, wallGate.transform.rotation);
-			firstTime = false;
+		wallGate = null;
+		if (BoolStorage.firstTime) {
+			//wallGate = walls[Random.Range(1, walls.Count)];
+			Instantiate(Entrance, new Vector3(0, 0, -(height/2)), Quaternion.Euler(0,270,0));
+			foreach (GameObject wall in walls) {
+				if (wall.transform.position == new Vector3(0, 0, -(height/2)+1)) {
+					wallGate = wall;
+				}
+			}
+			BoolStorage.firstTime = false;
 		} else {
+			newExitPosition();
 			foreach (GameObject wall in walls) {
 				if (wall.transform.position.x == newExitPosition().x && wall.transform.position.z == newExitPosition().y) {
 					wallGate = wall;
 				}
 			}
 		}
-		
-		if (wallGate.transform.rotation == Quaternion.Euler(new Vector3(0, 90, 0))) {
+/*		if (wallGate.transform.rotation == Quaternion.Euler(new Vector3(0, 90, 0))) {
 			foreach (TileHolder TH in allTiles) {
 				if (TH.game_obj.transform.position.x == wallGate.transform.position.x && TH.game_obj.transform.position.z == (wallGate.transform.position.z - 1f )) {
 					if (TH.game_obj.tag != "Grass" || TH.obj_tag != "Grass") {
@@ -348,34 +391,39 @@ public class LvlGen3 : MonoBehaviour {
 				}
 			}
 		}
-		
+		*/
 
-		wallGate.SetActive(false);
-
+//		wallGate.SetActive(false);
+		BoolStorage.firstTime = false;
 		
 		
 	}
 
 	void PlayerTile() {
 
-	}
+	}	
 
-	private Vector2 newExitPosition() {
-		if (!firstTime) {
+	private Vector3 newExitPosition() {
+		if (!BoolStorage.firstTime) {
 			Vector3 exitPosition = player.GetComponent<OpenDoor>().exitPosition;
 			Vector3 exitRotation = player.GetComponent<OpenDoor>().exitRotation;
 			if (wall.transform.position == exitPosition) {
 				if (exitRotation == new Vector3(0, 0, 0)) {
-					return new Vector2(exitPosition.x + 49f, exitPosition.z);
+					BoolStorage.gatePosition = new Vector3(exitPosition.x + 49f, 0, exitPosition.z);
+					return new Vector3(exitPosition.x + 49f, 0, exitPosition.z);
 
 				} else if (exitRotation == new Vector3(0, 90, 0)) {
-					return new Vector2(exitPosition.x, exitPosition.z - 49f);
+					BoolStorage.gatePosition = new Vector3(exitPosition.x, 0, exitPosition.z - 49f);
+					return new Vector3(exitPosition.x, 0, exitPosition.z - 49f);
 
 				} else if (exitRotation == new Vector3(0, 180, 0)) {
-					return new Vector2(exitPosition.x - 49f, exitPosition.z);
+					BoolStorage.gatePosition = new Vector3(exitPosition.x - 49f, 0, exitPosition.z);
+					return new Vector3(exitPosition.x - 49f, 0, exitPosition.z);
 
  				} else if (exitRotation == new Vector3(0, 270, 0)) {
-					return new Vector2(exitPosition.x, exitPosition.z + 49f);				}
+					BoolStorage.gatePosition = new Vector3(exitPosition.x, 0, exitPosition.z + 49f);
+					return new Vector3(exitPosition.x, 0, exitPosition.z + 49f);				
+				 }
 			}
 		}
 		return Vector3.zero;

@@ -7,7 +7,7 @@ public class KeyPlacement : MonoBehaviour {
 
 	public LvlGen3 gen3;
 	bool allDone = false;
-	int width;
+//	int width;
 	bool keyPlaced = false;
 	public LayerMask obstacle;
 	public LayerMask player;
@@ -15,7 +15,7 @@ public class KeyPlacement : MonoBehaviour {
 
 	void Start () {
 		allDone = gen3.GetComponent<LvlGen3>().allDone;
-		width = (gen3.GetComponent<LvlGen3>().width / 2);
+//		width = (gen3.GetComponent<LvlGen3>().width / 2);
 	}
 	
 	void Update () {
@@ -24,8 +24,8 @@ public class KeyPlacement : MonoBehaviour {
 		}
 
 		if (allDone && !keyPlaced) {
-			float rndX = Random.Range(-width, width);
-			float rndY = Random.Range(-width, width);
+			float rndX = Random.Range(-20, 20);
+			float rndY = Random.Range(-20, 20);
 
 			gameObject.transform.position = new Vector3(rndX, 0.35f, rndY);
 			keyPlaced = (!Physics.CheckSphere(gameObject.transform.position, 0.1f, obstacle) && !Physics.CheckSphere(gameObject.transform.position, 0.3f, player) && !Physics.CheckSphere(gameObject.transform.position, 0.3f, gwyllgi));

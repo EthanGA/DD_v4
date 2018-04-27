@@ -6,6 +6,8 @@ public class Caught : MonoBehaviour {
 	public Canvas canvas;
 	public Image image;
 	public Text text;
+	public Text buttontext;
+	public Button button;
 	public bool caught = false;
 
 	void Start() {
@@ -19,6 +21,8 @@ public class Caught : MonoBehaviour {
 			GetComponentInParent<Movement>().enabled = false;
 			image.CrossFadeAlpha(1f, 3, false);
 			text.CrossFadeAlpha(1f, 5, false);
+			buttontext.CrossFadeAlpha(1f, 5, false);
+			button.CrossFadeAlpha(1f, 5, false);
 		} 
 	} 
 }

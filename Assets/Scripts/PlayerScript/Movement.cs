@@ -103,7 +103,7 @@ public class Movement : MonoBehaviour {
 			 }
 		}
  
-		if (lightOff && vision <= 0.035f) {
+		if (lightOff && vision <= 0.05f) {
 			
 			vision += 0.005f * Time.deltaTime;
 			RenderSettings.ambientLight = new Color(vision, vision, vision, 1);
