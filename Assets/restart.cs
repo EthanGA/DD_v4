@@ -7,7 +7,7 @@ public class restart : MonoBehaviour {
 
 	
 
-	void Restart () {
+	public void Restart () {
 		BoolStorage.firstTime = true;
 		BoolStorage.gameCount = 0;
 		Scene loadedLevel = SceneManager.GetActiveScene();

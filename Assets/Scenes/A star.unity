@@ -533,12 +533,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 6e3af3712e4047c4eb3566ca33b50e99, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 2117478304}
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5808823, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1104,9 +1104,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: cea503011c7c8df44908f856f75dad9e, type: 3}
     m_FontSize: 70
-    m_FontStyle: 3
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -1284,6 +1284,30 @@ Prefab:
       propertyPath: buttonText
       value: 
       objectReference: {fileID: 1533248189}
+    - target: {fileID: 114760995934016122, guid: cbe450b83280c784cba26c91444338ab,
+        type: 2}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 413938881}
+    - target: {fileID: 114760995934016122, guid: cbe450b83280c784cba26c91444338ab,
+        type: 2}
+      propertyPath: buttontext
+      value: 
+      objectReference: {fileID: 1533248189}
+    - target: {fileID: 108734351396738238, guid: cbe450b83280c784cba26c91444338ab,
+        type: 2}
+      propertyPath: m_SpotAngle
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800195356600400, guid: cbe450b83280c784cba26c91444338ab, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108734351396738238, guid: cbe450b83280c784cba26c91444338ab,
+        type: 2}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbe450b83280c784cba26c91444338ab, type: 2}
   m_IsPrefabParent: 0
@@ -1376,7 +1400,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: cea503011c7c8df44908f856f75dad9e, type: 3}
-    m_FontSize: 18
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1387,7 +1411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Restart?
 --- !u!222 &1533248190
 CanvasRenderer:
   m_ObjectHideFlags: 0

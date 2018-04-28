@@ -22,7 +22,7 @@ public class Caught : MonoBehaviour {
 			image.CrossFadeAlpha(1f, 3, false);
 			text.CrossFadeAlpha(1f, 5, false);
 			buttontext.CrossFadeAlpha(1f, 5, false);
-			button.CrossFadeAlpha(1f, 5, false);
+			//button.CrossFadeAlpha(1f, 5, false);
 		} 
 	} 
 }
