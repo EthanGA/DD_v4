@@ -121,6 +121,7 @@ public class Tutorial_UI : MonoBehaviour {
 					
 			} else if (a5 <= 0 && !wallGone) {
 				wall1.GetComponent<Rigidbody>().transform.Translate((Vector3.right * 2f) * Time.deltaTime);
+				hide_tiles.SetActive(false);
 				Debug.Log(wall1.GetComponent<Rigidbody>().transform.position.z);
 				if (wall1.GetComponent<Rigidbody>().transform.position.z >= -21.68){
 					hide_tiles.SetActive(false);
