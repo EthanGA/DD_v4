@@ -115,12 +115,16 @@ public class Tutorial_UI : MonoBehaviour {
 				txt4.color = new Color(255, 255, 255, a4);
 			} 
 
-			gate.SetActive(true);
+			if (!playerEntered) {
+				gate.SetActive(true);
+			}
+			
 			if (playerEntered) {
 				player.SetActive(false);
 				camera.GetComponent<FollowPlayer>().player = player2;
 				player2.SetActive(true);
 				SunSet.GetComponent<SunSet_Color>().start = true;
+				gate.SetActive(false);
 			}	
 		}	
 	}
