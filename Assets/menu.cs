@@ -6,8 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour {
 	
+	public static bool tutorial;
+
+	public void tutorialOn() {
+		tutorial = true;
+	}
+
+	public void tutorialOff() {
+		tutorial = false;
+	}
+
 	public void NextScene() {
-		SceneManager.LoadScene("A star");
+		if (tutorial) {
+			SceneManager.LoadScene("Intro2");
+		}
+		if (!tutorial) {
+			SceneManager.LoadScene("A Star");
+		}
 	}
 
 	public void Tank() {

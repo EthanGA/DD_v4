@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour {
 	public Light myLight;
 	public GameObject body;
 
-	bool paused = false;
+	public bool paused = false;
 	public GameObject pauseMenu;
 
 	void FixedUpdate() {

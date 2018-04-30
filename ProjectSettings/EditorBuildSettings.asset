@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/A star.unity
     guid: 6e3af3712e4047c4eb3566ca33b50e99
+  - enabled: 1
+    path: Assets/Scenes/Intro2.unity
+    guid: feff45ec595601540a58d386c783ea5c
