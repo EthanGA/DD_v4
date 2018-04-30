@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour {
 	public bool lightOff = false;
 	public float vision = 0.01f;
 	public Light myLight;
+	public GameObject body;
 
 	void FixedUpdate() {
 		personalModifier = 1.0f;
@@ -48,6 +49,7 @@ public class Movement : MonoBehaviour {
 		float globalMod = terrainModifier * personalModifier;
 
 		Quaternion targetRotation = transform.rotation;
+		Quaternion targetRotation1 = body.transform.rotation;
 		Vector3 direction = Vector3.zero;
 		direction.x = Input.GetAxis("Horizontal"); 
         direction.z = Input.GetAxis("Vertical");
@@ -56,13 +58,25 @@ public class Movement : MonoBehaviour {
         
 		
 		if (Input.GetKey("e")) {
-			transform.rotation *=  Quaternion.AngleAxis(3, Vector3.up);
-			transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation , 30f * Time.deltaTime);
-        }
+			if (MovementType.tank) {
+				transform.rotation *=  Quaternion.AngleAxis(3, Vector3.up);
+				transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation , 30f * Time.deltaTime);
+			} 
+			if (!MovementType.tank) {
+				body.transform.rotation *=  Quaternion.AngleAxis(1, Vector3.up);
+				body.transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation1, 30f * Time.deltaTime);
+			}
+        }	
 		
 		if (Input.GetKey("q")) {
-			transform.rotation *=  Quaternion.AngleAxis(3, Vector3.down);
-			transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation , 25f * Time.deltaTime);		
+			if (MovementType.tank) {
+				transform.rotation *=  Quaternion.AngleAxis(3, Vector3.down);
+				transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation , 30f * Time.deltaTime);		
+			} 
+			if (!MovementType.tank) {
+				body.transform.rotation *=  Quaternion.AngleAxis(1, Vector3.down);
+				body.transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation1, 30f * Time.deltaTime);
+			}
 		}
 	}
 
