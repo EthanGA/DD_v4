@@ -16,4 +16,9 @@ public class credits : MonoBehaviour {
 	public void ShowCredits() {
 		main.SetActive(false);
 	}
+
+	public void ShowPlayOptions() {
+		main.SetActive(false);
+		gameObject.SetActive(false);
+	}
 }
