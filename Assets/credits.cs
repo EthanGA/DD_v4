@@ -6,19 +6,25 @@ using UnityEngine.UI;
 public class credits : MonoBehaviour {
 
 	public GameObject main;
+	public GameObject playOptions;
 
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			main.SetActive(true);
+			playOptions.SetActive(false);
+			gameObject.GetComponent<Text>().enabled = false;
 		}
 	}
 
 	public void ShowCredits() {
 		main.SetActive(false);
+		playOptions.SetActive(false);
+		gameObject.GetComponent<Text>().enabled = true;
 	}
 
 	public void ShowPlayOptions() {
 		main.SetActive(false);
-		gameObject.SetActive(false);
+		gameObject.GetComponent<Text>().enabled = false;
+		playOptions.SetActive(true);
 	}
 }
