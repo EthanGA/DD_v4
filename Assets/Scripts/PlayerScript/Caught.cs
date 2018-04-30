@@ -12,6 +12,7 @@ public class Caught : MonoBehaviour {
 	void Start() {
 		image.GetComponent<CanvasRenderer>().SetAlpha(0.05f);
 		text.GetComponent<CanvasRenderer>().SetAlpha(0f);
+		buttontext.GetComponent<CanvasRenderer>().SetAlpha(0f);
 	}
 
 	void OnTriggerEnter(Collider collider) {

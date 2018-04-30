@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour {
 
@@ -20,7 +21,11 @@ public class Movement : MonoBehaviour {
 	public Light myLight;
 	public GameObject body;
 
+	bool paused = false;
+	public GameObject pauseMenu;
+
 	void FixedUpdate() {
+
 		personalModifier = 1.0f;
 
 		if (Input.GetButton("Run")) {
@@ -81,6 +86,18 @@ public class Movement : MonoBehaviour {
 	}
 
 	void Update() {
+		if (Input.GetButtonDown("Cancel")) {
+			if (!paused) {
+				Time.timeScale = 0;
+				pauseMenu.SetActive(true);
+				paused = true;
+			} else {
+				Time.timeScale = 1;
+				pauseMenu.SetActive(false);
+				paused = false;
+			}
+		}
+
 		if (Input.GetKeyDown("f")) {
 			if (light.activeInHierarchy) {
 				light.SetActive(false);

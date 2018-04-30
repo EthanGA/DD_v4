@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1724542334}
-  playOptions: {fileID: 0}
+  playOptions: {fileID: 1626325479}
 --- !u!114 &1626325482
 MonoBehaviour:
   m_ObjectHideFlags: 0
