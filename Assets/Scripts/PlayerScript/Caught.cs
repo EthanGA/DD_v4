@@ -7,12 +7,12 @@ public class Caught : MonoBehaviour {
 	public Image image;
 	public Text text;
 	public Text buttontext;
-	public Button button;
 	public bool caught = false;
 
 	void Start() {
 		image.GetComponent<CanvasRenderer>().SetAlpha(0.05f);
 		text.GetComponent<CanvasRenderer>().SetAlpha(0f);
+		buttontext.GetComponent<CanvasRenderer>().SetAlpha(0f);
 	}
 
 	void OnTriggerEnter(Collider collider) {
@@ -22,7 +22,6 @@ public class Caught : MonoBehaviour {
 			image.CrossFadeAlpha(1f, 3, false);
 			text.CrossFadeAlpha(1f, 5, false);
 			buttontext.CrossFadeAlpha(1f, 5, false);
-			//button.CrossFadeAlpha(1f, 5, false);
 		} 
 	} 
 }
