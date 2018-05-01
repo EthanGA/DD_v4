@@ -8,6 +8,10 @@ public class credits : MonoBehaviour {
 	public GameObject main;
 	public GameObject playOptions;
 
+	void Awake() {
+		gameObject.GetComponent<Text>().enabled = false;
+	}
+	
 	void Update() {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			main.SetActive(true);
@@ -23,8 +27,8 @@ public class credits : MonoBehaviour {
 	}
 
 	public void ShowPlayOptions() {
-		main.SetActive(false);
 		gameObject.GetComponent<Text>().enabled = false;
+		main.SetActive(false);
 		playOptions.SetActive(true);
 	}
 }
