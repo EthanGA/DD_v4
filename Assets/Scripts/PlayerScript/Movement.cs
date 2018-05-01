@@ -59,29 +59,33 @@ public class Movement : MonoBehaviour {
 		direction.x = Input.GetAxis("Horizontal"); 
         direction.z = Input.GetAxis("Vertical");
 		direction = direction.normalized * Time.deltaTime * globalMod;;
-        transform.Translate(direction);
+        if (MovementType.tank) {
+			transform.Translate(direction);
+		} else {
+			body.transform.Translate(direction);
+		}
         
 		
 		if (Input.GetKey("e")) {
-			if (MovementType.tank) {
+		//	if (MovementType.tank) {
 				transform.rotation *=  Quaternion.AngleAxis(3, Vector3.up);
 				transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation , 30f * Time.deltaTime);
-			} 
+	/*		} 
 			if (!MovementType.tank) {
 				body.transform.rotation *=  Quaternion.AngleAxis(1, Vector3.up);
 				body.transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation1, 30f * Time.deltaTime);
-			}
+			}*/
         }	
 		
 		if (Input.GetKey("q")) {
-			if (MovementType.tank) {
+	//		if (MovementType.tank) {
 				transform.rotation *=  Quaternion.AngleAxis(3, Vector3.down);
 				transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation , 30f * Time.deltaTime);		
-			} 
+	/*		} 
 			if (!MovementType.tank) {
 				body.transform.rotation *=  Quaternion.AngleAxis(1, Vector3.down);
 				body.transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation1, 30f * Time.deltaTime);
-			}
+			}*/
 		}
 	}
 
