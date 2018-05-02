@@ -5,12 +5,22 @@ using UnityEngine.UI;
 
 public class Tutorial_UI2 : MonoBehaviour {
 
-	public GameObject waterTrigger, player, torch1, torch2;
-	bool message1, message2, lamp, firstF, secondF = false;
+	public GameObject waterTrigger, player, player2, torch1, torch2, gate;
+	bool message1, message2, lamp, firstF, secondF, lastLevel, UI1 = false;
 	public Text text1, text2, text3, text4;
 	float a1, a2, a3, a4 = 0;
+	public Camera camera;
+	public Light SunSet;
 	
 	void Update () {
+		if (!UI1) {
+			bool done = gameObject.GetComponent<Tutorial_UI>().done;
+			if (done) {
+				gameObject.GetComponent<Tutorial_UI>().enabled = false;
+				UI1 = true;
+			}
+		}
+
 		if (!secondF) {
 			if (!firstF) {
 				lamp = player.GetComponent<Lamp>().gotLamp;
@@ -73,7 +83,7 @@ public class Tutorial_UI2 : MonoBehaviour {
 				a3 -= 0.02f;
 			}
 			if (a4 < 255) {
-				a4 += 0.005f;	
+				a4 += 0.01f;	
 			}
 			text1.color = new Color(255, 255, 255, a1);
 			text2.color = new Color(255, 255, 255, a2);
@@ -87,9 +97,10 @@ public class Tutorial_UI2 : MonoBehaviour {
 		}
 
 		if (secondF) {
-			if (a4 > 0) {
-				a4 -= 0.02f;
+			if (a4 < 255) {
+				a4 += 0.01f;	
 			}
+
 			text1.color = new Color(255, 255, 255, 0);
 			text2.color = new Color(255, 255, 255, 0);
 			text3.color = new Color(255, 255, 255, 0);
@@ -97,6 +108,19 @@ public class Tutorial_UI2 : MonoBehaviour {
 
 			torch1.SetActive(true);
 			torch2.SetActive(true);
+			lastLevel = gate.GetComponent<nextLevel>().lastLevel;
+		}
+
+		if (lastLevel) {
+			player.SetActive(false);
+			camera.GetComponent<FollowPlayer>().player = player2;
+			player2.SetActive(true);
+			SunSet.GetComponent<SunSet_Color>().start = true;
+			gate.SetActive(false);
+			text1.enabled = false;
+			text2.enabled = false;
+			text3.enabled = false;
+			text4.enabled = false;
 		}
 	}
 }
