@@ -29069,6 +29069,16 @@ Prefab:
       propertyPath: nightVision
       value: 
       objectReference: {fileID: 1882223123}
+    - target: {fileID: 114760995934016122, guid: cbe450b83280c784cba26c91444338ab,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114890389277446486, guid: cbe450b83280c784cba26c91444338ab,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbe450b83280c784cba26c91444338ab, type: 2}
   m_IsPrefabParent: 0
@@ -41127,6 +41137,7 @@ GameObject:
   - component: {fileID: 1935067431}
   - component: {fileID: 1935067435}
   - component: {fileID: 1935067436}
+  - component: {fileID: 1935067437}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -41258,6 +41269,17 @@ MonoBehaviour:
   text2: {fileID: 566507716}
   text3: {fileID: 2009022481}
   text4: {fileID: 2049106082}
+--- !u!114 &1935067437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935067430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0893a751b2a98ef4282f934ee20a0501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1940920722 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4151262825342588, guid: 327884ac63bec65489dae16251a86004,
@@ -41535,7 +41557,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1935067437}
         m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:

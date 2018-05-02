@@ -14,9 +14,9 @@ public class nextLevel : MonoBehaviour {
 			if (player.GetComponent<Lamp>().gotLamp) {
 				//player.transform.position = new Vector3(0f, 0.54f, 20f);
 				player2.SetActive(true);
-				camera.GetComponent<FollowPlayer>().player = player2;
 				player.SetActive(false);
-				sun.transform.position = new Vector3 (-14.62f, 33.27f, 25);
+				camera.GetComponent<FollowPlayer>().player = player2;
+				sun.transform.position = new Vector3 (-14.62f, 33.27f, 25);	
 			}
 		}
 	}
