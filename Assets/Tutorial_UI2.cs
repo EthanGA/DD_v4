@@ -83,7 +83,7 @@ public class Tutorial_UI2 : MonoBehaviour {
 				a3 -= 0.02f;
 			}
 			if (a4 < 255) {
-				a4 += 0.005f;	
+				a4 += 0.01f;	
 			}
 			text1.color = new Color(255, 255, 255, a1);
 			text2.color = new Color(255, 255, 255, a2);
@@ -97,9 +97,10 @@ public class Tutorial_UI2 : MonoBehaviour {
 		}
 
 		if (secondF) {
-			if (a4 > 0) {
-				a4 -= 0.02f;
+			if (a4 < 255) {
+				a4 += 0.01f;	
 			}
+
 			text1.color = new Color(255, 255, 255, 0);
 			text2.color = new Color(255, 255, 255, 0);
 			text3.color = new Color(255, 255, 255, 0);
@@ -116,6 +117,10 @@ public class Tutorial_UI2 : MonoBehaviour {
 			player2.SetActive(true);
 			SunSet.GetComponent<SunSet_Color>().start = true;
 			gate.SetActive(false);
+			text1.enabled = false;
+			text2.enabled = false;
+			text3.enabled = false;
+			text4.enabled = false;
 		}
 	}
 }
