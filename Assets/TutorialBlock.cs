@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class TutorialBlock : MonoBehaviour {
 	public Image pause;
+	public GameObject tutorial;
 
 	void Update() {
 
-		if (pause.enabled == true) {
-			gameObject.SetActive(false);
+		if (pause.isActiveAndEnabled == true) {
+			tutorial.SetActive(false);
 		} else {
-			gameObject.SetActive(true);
+			tutorial.SetActive(true);
 		}
 	}
 }

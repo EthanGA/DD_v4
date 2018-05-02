@@ -5,12 +5,22 @@ using UnityEngine.UI;
 
 public class Tutorial_UI2 : MonoBehaviour {
 
-	public GameObject waterTrigger, player, torch1, torch2;
-	bool message1, message2, lamp, firstF, secondF = false;
+	public GameObject waterTrigger, player, player2, torch1, torch2, gate;
+	bool message1, message2, lamp, firstF, secondF, lastLevel, UI1 = false;
 	public Text text1, text2, text3, text4;
 	float a1, a2, a3, a4 = 0;
+	public Camera camera;
+	public Light SunSet;
 	
 	void Update () {
+		if (!UI1) {
+			bool done = gameObject.GetComponent<Tutorial_UI>().done;
+			if (done) {
+				gameObject.GetComponent<Tutorial_UI>().enabled = false;
+				UI1 = true;
+			}
+		}
+
 		if (!secondF) {
 			if (!firstF) {
 				lamp = player.GetComponent<Lamp>().gotLamp;
@@ -97,6 +107,15 @@ public class Tutorial_UI2 : MonoBehaviour {
 
 			torch1.SetActive(true);
 			torch2.SetActive(true);
+			lastLevel = gate.GetComponent<nextLevel>().lastLevel;
+		}
+
+		if (lastLevel) {
+			player.SetActive(false);
+			camera.GetComponent<FollowPlayer>().player = player2;
+			player2.SetActive(true);
+			SunSet.GetComponent<SunSet_Color>().start = true;
+			gate.SetActive(false);
 		}
 	}
 }

@@ -4719,6 +4719,7 @@ MonoBehaviour:
   player2: {fileID: 1101995091}
   camera: {fileID: 1736740863}
   sun: {fileID: 1763373926}
+  lastLevel: 0
 --- !u!1 &156511628 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1177159503600380, guid: a3fbd90ec48db734e9fcd40e62412c6d,
@@ -32390,6 +32391,7 @@ MonoBehaviour:
   player2: {fileID: 1680427234}
   camera: {fileID: 0}
   sun: {fileID: 0}
+  lastLevel: 0
 --- !u!1 &1505806684
 GameObject:
   m_ObjectHideFlags: 0
@@ -33366,7 +33368,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1595630418}
-  - component: {fileID: 1595630419}
   m_Layer: 5
   m_Name: Tutorial Text
   m_TagString: Untagged
@@ -33400,18 +33401,6 @@ RectTransform:
   m_AnchoredPosition: {x: 28.300018, y: -170.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1595630419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595630417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2279b37df28b0a6428a0e7c0ce5fd4e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 291000807}
 --- !u!1 &1599151773
 GameObject:
   m_ObjectHideFlags: 0
@@ -41192,6 +41181,7 @@ GameObject:
   - component: {fileID: 1935067435}
   - component: {fileID: 1935067436}
   - component: {fileID: 1935067437}
+  - component: {fileID: 1935067438}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -41310,12 +41300,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterTrigger: {fileID: 1855809934}
   player: {fileID: 1680427234}
+  player2: {fileID: 1101995091}
   torch1: {fileID: 1484881380}
   torch2: {fileID: 1072977176}
+  gate: {fileID: 123688704}
   text1: {fileID: 1711216567}
   text2: {fileID: 566507716}
   text3: {fileID: 2009022481}
   text4: {fileID: 2049106082}
+  camera: {fileID: 1736740863}
+  SunSet: {fileID: 1763373926}
 --- !u!114 &1935067437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41327,6 +41321,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0893a751b2a98ef4282f934ee20a0501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1935067438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935067430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2279b37df28b0a6428a0e7c0ce5fd4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 291000807}
+  tutorial: {fileID: 1595630417}
 --- !u!4 &1940920722 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4151262825342588, guid: 327884ac63bec65489dae16251a86004,

@@ -15,6 +15,7 @@ public class Tutorial_UI : MonoBehaviour {
 	public Camera camera;
 	public Light SunSet;
 	bool w, a, s, d, q, e, wallGone, playerEntered = false;
+	public bool done = false;
 
 	void Awake() {
 		start = true;
@@ -125,6 +126,7 @@ public class Tutorial_UI : MonoBehaviour {
 				player2.SetActive(true);
 				SunSet.GetComponent<SunSet_Color>().start = true;
 				gate.SetActive(false);
+				done = true;
 			}	
 		}	
 	}
