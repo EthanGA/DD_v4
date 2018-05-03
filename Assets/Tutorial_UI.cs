@@ -127,6 +127,7 @@ public class Tutorial_UI : MonoBehaviour {
 				SunSet.GetComponent<SunSet_Color>().start = true;
 				gate.SetActive(false);
 				done = true;
+				txt4.color = new Color(255, 255, 255, 0);
 			}	
 		}	
 	}
