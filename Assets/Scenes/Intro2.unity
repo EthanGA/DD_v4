@@ -29705,7 +29705,7 @@ Prefab:
         type: 2}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 1590840031}
+      objectReference: {fileID: 291000805}
     - target: {fileID: 114263508507652424, guid: cbe450b83280c784cba26c91444338ab,
         type: 2}
       propertyPath: camera
@@ -35719,7 +35719,7 @@ Prefab:
         type: 2}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 1590840031}
+      objectReference: {fileID: 291000805}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbe450b83280c784cba26c91444338ab, type: 2}
   m_IsPrefabParent: 0
@@ -45977,7 +45977,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 291000807}
-  tutorial: {fileID: 1595630417}
+  tutorial1: {fileID: 1595630417}
+  tutorial2: {fileID: 0}
 --- !u!4 &1940920722 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4151262825342588, guid: 327884ac63bec65489dae16251a86004,
