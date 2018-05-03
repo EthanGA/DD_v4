@@ -10,6 +10,7 @@ public class ToggleControls : MonoBehaviour {
 	}
 
 	public void Toggle() {
+		Debug.Log("toggle pressed");
 		if (MovementType.tank) {
 			MovementType.tank = false;
 		}

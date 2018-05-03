@@ -22,7 +22,7 @@ public class SunSet_Color : MonoBehaviour {
 			}
 
 			if (x > 0.1) {
-				x -= 0.0005f;
+				x -= 0.001f;
 			}
 
 			if (red <= 0.01f && x <= 0.1) {
