@@ -11,6 +11,7 @@ public class Lamp : MonoBehaviour {
 		if (collider.gameObject.tag == "Lamp") {
 			gotLamp = true;
 			collider.gameObject.SetActive(false);
+			gameObject.GetComponent<Movement>().light = playerLight;
 			playerLight.SetActive(true);
 			pointLight.enabled = true;
 	

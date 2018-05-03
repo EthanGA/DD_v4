@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Spooky : MonoBehaviour {
 
-	public GameObject player, gwyllgi, SunSet;
+	public GameObject player, gwyllgi, SunSet, key1, key2;
 	public Light light;
-	bool once, msg1, msg2, msg3, msg4, msg5 = false;
+	bool once, msg1, msg2, msg3, msg4, msg5, keys = false;
 	public Text t1, t2, t3, t4;
 	float a1, a2, a3, a4, timer = 0;
 
@@ -25,21 +25,24 @@ public class Spooky : MonoBehaviour {
 	void FixedUpdate() {
 		if (once) {
 			if (msg1) {
-				if (a1 < 255) {
-					a1 += 0.01f;
+				if (a1 <= 1) {
+					a1 += 0.02f;
 					t1.color = new Color(255, 255, 255, a1);
 				} else {
+					Debug.Log("reached else");
 					msg2 = true;
 					msg1 = false;
 				}
 			}
 
 			if (msg2) {
-				if (a1 > 0) {
-					a1 -= 0.1f;
+				Debug.Log("reached msg2");
+				if (a1 >= 0) {
+					a1 -= 0.05f;
 					t1.color = new Color(255, 255, 255, a1);
+					
 				}
-				if (a2 < 255) {
+				if (a2 <= 1) {
 					a2 += 0.01f;
 					t2.color = new Color(255, 255, 255, a2);
 				} else {
@@ -49,16 +52,55 @@ public class Spooky : MonoBehaviour {
 			}
 
 			if (msg3) {
-
+				if (a2 >= 0) {
+					a2 -= 0.05f;
+					t2.color = new Color(255, 255, 255, a2);
+					
+				}
+				if (a3 <= 1) {
+					a3 += 0.01f;
+					t3.color = new Color(255, 255, 255, a3);
+				} else {
+					msg4 = true;
+					msg3 = false;
+				}
 			}
 
 			if (msg4) {
-
+				if (a3 >= 0) {
+					a3 -= 0.05f;
+					t3.color = new Color(255, 255, 255, a3);
+					
+				}
+				if (a4 <= 1) {
+					a4 += 0.01f;
+					t4.color = new Color(255, 255, 255, a4);
+				} else {
+					msg5 = true;
+					msg4 = false;
+				}
 			}
 
 			if (msg5) {
+				if (a4 >= 0) {
+					a4 -= 0.05f;
+					t4.color = new Color(255, 255, 255, a4);	
+				}
 
+				if (!keys) {
+					PlaceKeys();
+				}
+				
+			
 			}
+		}
+	}
+
+	void PlaceKeys() {
+		if (Physics.CheckSphere(key1.transform.position, 5f, 0)) {
+			key2.SetActive(true);
+		} else {
+			key1.SetActive(true);
 		}
 	}
 }
