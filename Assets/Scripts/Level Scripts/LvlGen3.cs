@@ -36,7 +36,7 @@ public class LvlGen3 : MonoBehaviour {
 	int doorCount;
 	int doorNumber;
 	public GameObject Door, Entrance;
-	//public GameObject gwyllgi, gwyllgi1, gwyllgi2;
+	public GameObject gwyllgi, gwyllgi1;
 
 	public bool allDone = false;
 	int smoothCount = 0;
@@ -213,6 +213,7 @@ public class LvlGen3 : MonoBehaviour {
 		CreateGate();
 		MakeObstacles();
 		PlayerTile();
+		WaterMesh();
 		allDone = true;
 	}
 
@@ -400,7 +401,48 @@ public class LvlGen3 : MonoBehaviour {
 	}
 
 	void PlayerTile() {
+		if (BoolStorage.gameCount == 0) {
+			gwyllgi1.SetActive(false);
+		} else {
+			gwyllgi1.SetActive(true);
+		}
+		
 
+		if (Physics.CheckSphere(player.transform.position, 0.2f, 0)) {
+			Collider[] hitColliders = Physics.OverlapSphere(player.transform.position, 0.5f, 0);
+			foreach (Collider collider in hitColliders) {
+				if (collider.gameObject == tree) {
+					collider.gameObject.SetActive(false);
+				}
+			}
+		}
+
+		if (Physics.CheckSphere(gwyllgi.transform.position, 0.2f, 0)) {
+			Collider[] hitColliders = Physics.OverlapSphere(gwyllgi.transform.position, 0.5f, 0);
+			foreach (Collider collider in hitColliders) {
+				if (collider.gameObject == tree) {
+					collider.gameObject.SetActive(false);
+				}
+			}
+		}
+
+		if (Physics.CheckSphere(gwyllgi1.transform.position, 0.2f, 0)) {
+			Collider[] hitColliders = Physics.OverlapSphere(gwyllgi1.transform.position, 0.5f, 0);
+			foreach (Collider collider in hitColliders) {
+				if (collider.gameObject == tree) {
+					collider.gameObject.SetActive(false);
+				}
+			}
+		}
+
+	/*	if (Physics.CheckSphere(gwyllgi2.transform.position, 0.2f, 0)) {
+			Collider[] hitColliders = Physics.OverlapSphere(gwyllgi2.transform.position, 0.5f, 0);
+			foreach (Collider collider in hitColliders) {
+				if (collider.gameObject == tree) {
+					collider.gameObject.SetActive(false);
+				}
+			}
+		}*/
 	}	
 
 	private Vector3 newExitPosition() {
@@ -427,5 +469,13 @@ public class LvlGen3 : MonoBehaviour {
 			}
 		}
 		return Vector3.zero;
+	}
+
+	void WaterMesh() {
+		foreach(TileHolder TH in allTiles) {
+			if (TH.obj_tag == "Water") {
+				TH.game_obj.GetComponent<MeshRenderer>().enabled = false;
+			}
+		}
 	}
 }

@@ -21,24 +21,24 @@ public class PlayerSoundSphere : MonoBehaviour {
 		RaycastHit hit;
 		Vector3 origin = gameObject.transform.position;
 		
-		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) {
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) {
 			if (Physics.Raycast(origin, Vector3.down, out hit)) {
 				if (hit.collider.tag == "Grass") {
 					if (!playingGrass && Input.GetKey(KeyCode.LeftShift)) {
 						movement.clip = grassFast;
-						movement.Play();
+						movement.volume = 1;
 						playingGrass = true;
 						playingWater = false;
 						
 					} else if (!playingGrass && Input.GetKey(KeyCode.LeftControl)) {
 						movement.clip = grassSlow;
-						movement.Play();
+						movement.volume = 1;
 						playingGrass = true;
 						playingWater = false;
 						
 					} else {
 						movement.clip = grassNormal;
-						movement.Play();
+						movement.volume = 1;
 						playingGrass = true;
 						playingWater = false;
 					}
@@ -47,26 +47,26 @@ public class PlayerSoundSphere : MonoBehaviour {
 				if (hit.collider.tag == "Water") {
 					if (!playingWater && Input.GetKey(KeyCode.LeftShift)) {
 						movement.clip = waterFast;
-						movement.Play();
+						movement.volume = 1;
 						playingWater = true;
 						playingGrass = false;
 			
 					} else if (!playingWater && Input.GetKey(KeyCode.LeftControl)) {
 						movement.clip = waterSlow;
-						movement.Play();
+						movement.volume = 1;
 						playingWater = true;
 						playingGrass = false;
 		
 					} else {
 						movement.clip = waterNormal;
-						movement.Play();
+						movement.volume = 1;
 						playingWater = true;
 						playingGrass = false;
 					}
 				}
 			}
 		} else {
-			movement.Stop();
+			movement.volume = 0f;
 			playingGrass = false;
 			playingWater = true;
 		}
