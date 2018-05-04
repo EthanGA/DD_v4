@@ -59,7 +59,7 @@ public class Tutorial_UI : MonoBehaviour {
 
 		if (trans1) {
 			if (a1 > 0) {
-				a1 -= 0.02f;
+				a1 -= 0.1f;
 			}
 			if (a2 < 255) {
 				a2 += 0.005f;	
@@ -75,7 +75,7 @@ public class Tutorial_UI : MonoBehaviour {
 
 		if (trans2) {
 			if (a2 > 0) {
-				a2 -= 0.02f;
+				a2 -= 0.1f;
 			}
 			if (a3 < 255) {
 				a3 += 0.005f;	
@@ -83,7 +83,7 @@ public class Tutorial_UI : MonoBehaviour {
 			txt2.color = new Color(255, 255, 255, a2);
 			txt3.color = new Color(255, 255, 255, a3);
 			if (Input.GetKey(KeyCode.LeftControl)) {
-				if (Input.GetKeyDown("w") || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d")) {
+				if (Input.GetKeyDown("w") || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) {
 					trans2 = false;
 					trans3 = true;
 					txt2.color = new Color(255, 255, 255, 0);
@@ -93,7 +93,7 @@ public class Tutorial_UI : MonoBehaviour {
 
 		if (trans3) {
 			if (a3 > 0) {
-				a3 -= 0.02f;
+				a3 -= 0.1f;
 			}
 			if (a4 < 255) {
 				a4 += 0.005f;	
@@ -101,7 +101,7 @@ public class Tutorial_UI : MonoBehaviour {
 			txt3.color = new Color(255, 255, 255, a3);
 			txt4.color = new Color(255, 255, 255, a4);
 			if (Input.GetKey(KeyCode.LeftShift)) {
-				if (Input.GetKeyDown("w") || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d")) {
+				if (Input.GetKeyDown("w") || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) {
 					txt3.color = new Color(255, 255, 255, 0);
 					trans3 = false;
 					end = true;
@@ -112,7 +112,7 @@ public class Tutorial_UI : MonoBehaviour {
 		if (end) {
 			
 			if (a4 > 0) {
-				a4 -= 0.02f;
+				a4 -= 0.1f;
 				txt4.color = new Color(255, 255, 255, a4);
 			} 
 

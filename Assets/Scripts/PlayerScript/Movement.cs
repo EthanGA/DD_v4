@@ -93,7 +93,6 @@ public class Movement : MonoBehaviour {
 
 	void Update() {
 		brightness = canvas.GetComponent<ToggleControls>().brightness;
-		Debug.Log(brightness);
 		if (Input.GetButtonDown("Cancel")) {
 			if (!paused) {
 				Time.timeScale = 0;
@@ -136,9 +135,11 @@ public class Movement : MonoBehaviour {
 			 if (darkSky) {
 				RenderSettings.ambientLight = new Color(0.39f, 0.39f, 0.39f, 1);
 				darkSky = false;
+				reset = true;
 			 } else {
 				RenderSettings.ambientLight = new Color(0.01f, 0.01f, 0.01f, 1);
 				darkSky = true;
+				reset = false;
 			 }
 		}
  
@@ -149,7 +150,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
-		if (!lightOff) {
+		if (!lightOff & !reset) {
 			RenderSettings.ambientLight = new Color(0.01f + brightness, 0.01f + brightness, 0.01f + brightness, 1);
 			vision = 0.01f;
 			//reset = true;
