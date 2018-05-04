@@ -97,10 +97,10 @@ public class Spooky : MonoBehaviour {
 	}
 
 	void PlaceKeys() {
-		if (Physics.CheckSphere(key1.transform.position, 5f, 0)) {
-			key2.SetActive(true);
-		} else {
+	//	if (Physics.CheckSphere(key1.transform.position, 5f, 0)) {
+	//		key2.SetActive(true);
+	//	} else {
 			key1.SetActive(true);
-		}
+	//	}
 	}
 }
