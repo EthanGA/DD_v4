@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ToggleControls : MonoBehaviour {
+
+	public float brightness;
+	public Slider slider;
+
+	public void BrightnessChange() {
+		brightness = slider.value;
+	}
 
 	public void MainMenu() {
 		SceneManager.LoadScene("MainMenu");

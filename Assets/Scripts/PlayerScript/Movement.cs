@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour {
 
 	public bool paused = false;
 	public GameObject pauseMenu;
+	float brightness;
+	public Canvas canvas;
 
 	void FixedUpdate() {
 
@@ -90,6 +92,8 @@ public class Movement : MonoBehaviour {
 	}
 
 	void Update() {
+		brightness = canvas.GetComponent<ToggleControls>().brightness;
+		Debug.Log(brightness);
 		if (Input.GetButtonDown("Cancel")) {
 			if (!paused) {
 				Time.timeScale = 0;
@@ -138,16 +142,17 @@ public class Movement : MonoBehaviour {
 			 }
 		}
  
-		if (lightOff && vision <= 0.15f) {
-			
-			vision += 0.02f * Time.deltaTime;
-			RenderSettings.ambientLight = new Color(vision, vision, vision, 1);
+		if (lightOff) {
+			RenderSettings.ambientLight = new Color(vision + brightness, vision + brightness, vision + brightness, 1);
+			if (vision <= 0.03f) {
+				vision += 0.01f * Time.deltaTime;
+			}
 		}
 
-		if (!lightOff && !reset) {
-			RenderSettings.ambientLight = new Color(0.01f, 0.01f, 0.01f, 1);
+		if (!lightOff) {
+			RenderSettings.ambientLight = new Color(0.01f + brightness, 0.01f + brightness, 0.01f + brightness, 1);
 			vision = 0.01f;
-			reset = true;
+			//reset = true;
 		} 
 	}
 }

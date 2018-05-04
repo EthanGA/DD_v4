@@ -26,7 +26,7 @@ public class Spooky : MonoBehaviour {
 		if (once) {
 			if (msg1) {
 				if (a1 <= 1) {
-					a1 += 0.02f;
+					a1 += 0.005f;
 					t1.color = new Color(255, 255, 255, a1);
 				} else {
 					Debug.Log("reached else");
@@ -36,14 +36,13 @@ public class Spooky : MonoBehaviour {
 			}
 
 			if (msg2) {
-				Debug.Log("reached msg2");
 				if (a1 >= 0) {
 					a1 -= 0.05f;
 					t1.color = new Color(255, 255, 255, a1);
 					
 				}
 				if (a2 <= 1) {
-					a2 += 0.01f;
+					a2 += 0.005f;
 					t2.color = new Color(255, 255, 255, a2);
 				} else {
 					msg3 = true;
@@ -58,7 +57,7 @@ public class Spooky : MonoBehaviour {
 					
 				}
 				if (a3 <= 1) {
-					a3 += 0.01f;
+					a3 += 0.005f;
 					t3.color = new Color(255, 255, 255, a3);
 				} else {
 					msg4 = true;
@@ -67,13 +66,14 @@ public class Spooky : MonoBehaviour {
 			}
 
 			if (msg4) {
+				
 				if (a3 >= 0) {
 					a3 -= 0.05f;
 					t3.color = new Color(255, 255, 255, a3);
 					
 				}
 				if (a4 <= 1) {
-					a4 += 0.01f;
+					a4 += 0.005f;
 					t4.color = new Color(255, 255, 255, a4);
 				} else {
 					msg5 = true;
