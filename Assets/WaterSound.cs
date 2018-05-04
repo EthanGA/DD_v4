@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterTrigger : MonoBehaviour {
+public class WaterSound : MonoBehaviour {
 
-	public bool startMessage = false;
-	public bool message2 = false;
+	public bool onWater = false;
 	public AudioSource source;
 
 	void Update() {
-		if (startMessage) {
+		if (onWater) {
 			if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
 				if (source.volume < 0.5f) {
 					source.volume += 0.01f;
@@ -26,11 +25,10 @@ public class WaterTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider collider) {
-		startMessage = true;
+		onWater = true;
 	}
 
 	void OnTriggerExit (Collider collider) {
-		message2 = true;
-		startMessage = false;
+		onWater = false;
 	}
 }

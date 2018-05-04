@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class restart : MonoBehaviour {
 
-	
-
 	public void Restart () {
 		BoolStorage.firstTime = true;
 		BoolStorage.gameCount = 0;

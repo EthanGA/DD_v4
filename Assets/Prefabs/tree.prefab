@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4930554760796366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 33966372859891784}
   - component: {fileID: 23854495311868982}
   - component: {fileID: 65013922918924044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
