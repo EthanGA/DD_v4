@@ -930,7 +930,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1453576900
+  randomSeed: -1692121097
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4132,7 +4132,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1440622758
+  randomSeed: 196560064
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7340,7 +7340,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1171605963
+  randomSeed: 671954311
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10542,7 +10542,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 590315011
+  randomSeed: 291095200
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13750,7 +13750,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -66651989
+  randomSeed: 1798698008
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -16199,7 +16199,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -16240,7 +16240,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -17017,7 +17017,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1763705500
+  randomSeed: 1845766526
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -19466,7 +19466,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -19507,7 +19507,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2

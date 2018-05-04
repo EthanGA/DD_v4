@@ -25,16 +25,16 @@ public class Tutorial_UI : MonoBehaviour {
 
 		playerEntered = gate.GetComponentInChildren<tutorialGate>().playerEntered;
 
-		if (start && Input.GetKeyDown("w")) {
+		if (Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) {
 				w = true;
 		}
-		if (start && Input.GetKeyDown("a")) {
+		if (Input.GetKeyDown("a") || Input.GetKeyDown(KeyCode.LeftArrow)) {
 				a = true;
 		}
-		if (start && Input.GetKeyDown("s")) {
+		if (Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.RightArrow)) {
 				s = true;
 		}
-		if (start && Input.GetKeyDown("d")) {
+		if (Input.GetKeyDown("d") || Input.GetKeyDown(KeyCode.DownArrow)) {
 				d = true;
 		}
 		if (trans1 && Input.GetKeyDown("q")) {
