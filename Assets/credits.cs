@@ -27,7 +27,7 @@ public class credits : MonoBehaviour {
 	}
 
 	public void ShowPlayOptions() {
-		gameObject.GetComponent<Text>().enabled = false;
+		gameObject.GetComponent<Text>().enabled = true;
 		main.SetActive(false);
 		playOptions.SetActive(true);
 	}

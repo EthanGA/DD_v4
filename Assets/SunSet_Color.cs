@@ -18,11 +18,11 @@ public class SunSet_Color : MonoBehaviour {
 	void FixedUpdate() {
 		if (start) {
 			if (red > 0.01f) {
-				red = red - 0.01f * Time.deltaTime;
+				red = red - 0.05f * Time.deltaTime;
 			}
 
 			if (x > 0.1) {
-				x -= 0.001f;
+				x -= 0.002f;
 			}
 
 			if (red <= 0.01f && x <= 0.1) {
