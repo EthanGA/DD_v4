@@ -10,7 +10,7 @@ public class WaterSound : MonoBehaviour {
 	void Update() {
 		if (onWater) {
 			if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
-				if (source.volume < 0.5f) {
+				if (source.volume < 0.1f) {
 					source.volume += 0.01f;
 				}
 				
